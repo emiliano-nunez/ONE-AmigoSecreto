@@ -49,6 +49,7 @@ ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 10px;
     text-align: center; 
     text-shadow: 2px 2px 4px #242323;
 }
@@ -87,6 +88,12 @@ button {
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
+}
+
+#sortear {
+    background-color: #3f8eb2;
+    color: #242323;
+    width: 100%;
 }
 
 footer {

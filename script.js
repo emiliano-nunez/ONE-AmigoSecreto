@@ -1,7 +1,9 @@
 
-const button = document.getElementById('button');
+const BtnAgregar = document.getElementById('agregar');
+const BtnSortear = document.getElementById('sortear');
 let input = document.getElementById('input');
 let info = document.getElementById('info');
+let info2 = document.getElementById('info2');
 let list = document.getElementById('list');
 
 let amigos = [];
@@ -9,12 +11,12 @@ let amigo = '';
 
 function validarEntrada() {
     if (input.value === '' || !input.value || input.value === ' ') {
-        info.innerHTML = 'Debes escribir un nombre';
+        info.innerText = 'Debes escribir un nombre';
         info.style.color = '#DDE423';
         return false;
     } else{
         info.style.color = '#4CAF50';
-        info.innerHTML = 'Añade otro amigo!';
+        info.innerText = 'Añade otro amigo!';
         return true;
     }
 }
@@ -36,4 +38,25 @@ function mostrar() {
     for (let amigo = 0; amigo < amigos.length; amigo++) {
         list.innerHTML += `<li>${amigos[amigo]}</li>`;
     }
+}
+
+function sortear() {
+    let cantidad = amigos.length;
+    if (cantidad < 2) {
+        info2.style.color = '#3f8eb2';
+        info2.innerText = 'Debe haber al menos dos amigos para sortear!';
+    } else {
+        info2.style.color = "#fff"
+        info2.innerText = 'Añade a tus amigos a la lista de la sección';
+        info.style.color = '#FFF';
+        info.innerText = '';
+        let ganador = Math.floor(Math.random() * amigos.length);
+        limpiarYMostrar(amigos[ganador]);
+    }
+
+}
+
+function limpiarYMostrar(ganador) {
+    list.innerHTML = `<h2>Ganó ${ganador}!!!</h2>`;
+    return;
 }
