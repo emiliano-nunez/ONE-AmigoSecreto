@@ -4,6 +4,13 @@ header {
     font-size: 30px;
     color: #fff;
     text-shadow: 2px 2px 4px #242323;
+
+    #img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100px;
+        padding: 20px;
+    }
 }
 
 body {
