@@ -54,10 +54,10 @@ function sortear() {
 
 function startConfetti() {
     confetti({
-      particleCount: 500,
-      spread: 75,
-      origin: { y: .8 },
-      colors: ['#b2aa8e', '#0c1b33', '#7a306c', '#03b5aa', '#dbfe87'],
+      particleCount: 200,
+      spread: 360,
+      origin: { y: .3 },
+      colors: ['#fee0be', '#5ff9b1', '#ff8f9b', '#eba1ff'],
     });
   }
 
