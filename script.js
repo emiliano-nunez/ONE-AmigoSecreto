@@ -62,6 +62,7 @@ function startConfetti() {
   }
 
 function limpiarYMostrarGanador(ganador) {
+    confetti();
     list.innerHTML = `<h2>Ganó ${ganador}!!!</h2>`;
     startConfetti();
     return;
