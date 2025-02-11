@@ -1,6 +1,3 @@
-
-const BtnAgregar = document.getElementById('agregar');
-const BtnSortear = document.getElementById('sortear');
 let input = document.getElementById('input');
 let info = document.getElementById('info');
 let info2 = document.getElementById('info2');
@@ -27,7 +24,6 @@ function agregar() {
         amigos.push(amigo);
         input.value = '';
         mostrar();
-        console.log(amigos);
     } else {
         console.log("error de entrada");
     }
@@ -51,12 +47,12 @@ function sortear() {
         info.style.color = '#FFF';
         info.innerText = '';
         let ganador = Math.floor(Math.random() * amigos.length);
-        limpiarYMostrar(amigos[ganador]);
+        limpiarYMostrarGanador(amigos[ganador]);
     }
 
 }
 
-function limpiarYMostrar(ganador) {
+function limpiarYMostrarGanador(ganador) {
     list.innerHTML = `<h2>Ganó ${ganador}!!!</h2>`;
     return;
 }
