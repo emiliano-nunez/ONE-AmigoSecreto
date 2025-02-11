@@ -52,7 +52,17 @@ function sortear() {
 
 }
 
+function confetti() {
+  confetti({
+    particleCount: 500, 
+    spread: 80,
+    origin: { y: .8 },
+    colors: ['#fee0be', '#5ff9b1', '#ff8f9b', '#eba1ff', '#5ae0a1'],
+  });
+}
+
 function limpiarYMostrarGanador(ganador) {
+    confetti();
     list.innerHTML = `<h2>Ganó ${ganador}!!!</h2>`;
     return;
 }
