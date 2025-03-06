@@ -23,6 +23,7 @@ function agregar() {
         amigo = input.value;
         amigos.push(amigo);
         input.value = '';
+        input.focus();
         mostrar();
     } else {
         console.log("error de entrada");
